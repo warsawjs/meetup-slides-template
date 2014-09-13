@@ -1,0 +1,17 @@
+.slide h2.header {
+    margin: 30px 0 0;
+    text-align: center;
+    font-size: 70px;
+}
+
+.slide h2.header + img {
+    margin: 20px auto 0px;
+    display: block;
+}
+
+.slide h2.header + img + p {
+    margin: 10px 0 0;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+}
