@@ -1,17 +1,53 @@
-.slide h2.header {
-    margin: 30px 0 0;
-    text-align: center;
-    font-size: 70px;
+@font-face {
+  font-family: firalight;
+  src: url(../fonts/FiraSans-Light.otf);
 }
 
-.slide h2.header + img {
-    margin: 20px auto 0px;
-    display: block;
+@font-face {
+  font-family: firaultralight;
+  src: url(../fonts/FiraSans-UltraLight.otf);
 }
 
-.slide h2.header + img + p {
-    margin: 10px 0 0;
-    text-align: center;
-    font-style: italic;
-    font-size: 20px;
+.slide h2 {
+  color: black;
+  font-weight: normal; 
+  font-family: firalight;
+}
+
+.slide:after {
+  display: none;
+}
+
+.front-page {
+  background: url(../images/panoramatail.png) repeat-x white 0px 90%;
+  background-size: 20%;
+}
+
+.front-page .logo {
+  width: 45%;
+  float: left;
+}
+
+.front-page img {
+  width: 100%;
+}
+
+.front-page .content {
+  float: left;
+  width: calc(55% - 53px);
+  border-left: 3px solid red;
+  padding: 10px 0 10px 50px;
+  margin-top: 50px;
+}
+
+.front-page .content h2 {
+  height: 200px;
+  margin: 0px;
+}
+
+.front-page .content p {
+  padding: 0px;
+  margin: 0px;
+  font-family: firaultralight;
+  color: #777;
 }
