@@ -1,3 +1,7 @@
+/*
+ JS Yellow: #f0db4f
+ WarsawJS Red: #f7302f
+*/
 @font-face {
   font-family: firalight;
   src: url(../fonts/FiraSans-Light.otf);
@@ -8,9 +12,14 @@
   src: url(../fonts/FiraSans-UltraLight.otf);
 }
 
+@font-face {
+  font-family: fira;
+  src: url(../fonts/FiraSans-Regular.otf);
+}
+
 .slide h2 {
-  color: black;
-  font-weight: normal; 
+  color: #f7302f;
+  font-weight: normal;
   font-family: firalight;
 }
 
@@ -43,6 +52,7 @@
 .front-page .content h2 {
   height: 200px;
   margin: 0px;
+  color: black;
 }
 
 .front-page .content p {
@@ -50,4 +60,40 @@
   margin: 0px;
   font-family: firaultralight;
   color: #777;
+}
+
+.slide kbd, .slide code, .slide samp {
+  background-color: #f0db4f;
+}
+
+.slide b, .slide strong {
+  color: #f7302f;
+}
+
+.slide pre mark {
+  background-color: #f0db4f;
+}
+
+.slide pre mark.important {
+  background-color: #f7302f;
+}
+
+.slide p {
+  font-family: fira;
+}
+
+.slide.shout h2 {
+  color: black;
+}
+
+.slide.cover h2 {
+  color: white;
+}
+
+.slide.cover div img {
+  width: 100%;
+}
+
+.full .progress div {
+  border-color: transparent transparent #f7302f;
 }
