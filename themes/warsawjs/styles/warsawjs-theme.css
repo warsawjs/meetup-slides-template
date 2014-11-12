@@ -20,7 +20,7 @@
 .slide h2 {
   color: #f7302f;
   font-weight: normal;
-  font-family: firalight;
+  font-family: firalight, sans-serif;
 }
 
 .slide:after {
@@ -58,7 +58,7 @@
 .front-page .content p {
   padding: 0px;
   margin: 0px;
-  font-family: firaultralight;
+  font-family: firaultralight, sans-serif;
   color: #777;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .slide p {
-  font-family: fira;
+  font-family: fira, sans-serif;
 }
 
 .slide.shout h2 {
