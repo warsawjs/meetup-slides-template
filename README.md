@@ -1,5 +1,10 @@
 # WarsawJS Presentation Template
 
-![Image][0] 
+![Logo](/themes/warsawjs/pictures/logo.png)
 
-[0]: https://raw.githubusercontent.com/warsawjs/warsawjs-presentation-template/gh-pages/themes/warsawjs/pictures/logo.png
+---
+
+Licensed under [MIT License][0], see [license page][1] for details.
+
+0: http://en.wikipedia.org/wiki/MIT_License
+1: https://github.com/shower/shower/wiki/MIT-License
