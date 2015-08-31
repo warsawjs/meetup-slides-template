@@ -11,23 +11,11 @@
 //
 // ### _Connect your gamepad and go!_
 
-/*jslint devel: true, plusplus: true, vars: true */
-/*global window */
-
 (function (window) {
     'use strict';
 
-    // Handle game pad actions.
-    var update;
-
     // Outer reference to use and observe about emit events.
     var Gamepad;
-
-    // Get from GamepadList active pad.
-    var getActive;
-
-    // Analyze game pad axes, and emit event.
-    var handleJoysticks;
 
     // Instance of interval, which scan about joysticks moves.
     var waiting;
@@ -42,30 +30,28 @@
     var isArray = Array.isArray;
 
     // Useful fn to check if plain object.
-    var isPlainObject = function (o) {
+    function isPlainObject(o) {
         return toString.call(o) === '[object Object]';
-    };
+    }
 
     // Shortcut to often use.
-    var has = function (obj, prop) {
+    function has(obj, prop) {
         return Object.prototype.hasOwnProperty.call(obj, prop);
-    };
+    }
 
     // Check that browser support game pads.
-    var supportGamepad = has(window, 'GamepadEvent');
+    var isSupportGamepad = has(window, 'GamepadEvent');
 
     // Method override first object, by values from next passed objects.
-    var extend = function (orig, next) {
+    function extend(orig, next) {
         var result = next;
 
         if (isArray(orig)) {
-            /*jslint unparam: true */
             orig.forEach(function (key, index) {
                 if (has(next, index)) {
                     orig[index] = next[index];
                 }
             });
-            /*jslint unparam: false */
             result = orig;
         } else if (isPlainObject(orig)) {
             Object.keys(next).forEach(function (prop) {
@@ -75,7 +61,7 @@
         }
 
         return result;
-    };
+    }
 
     // Event manager.
     // --------------
@@ -116,25 +102,15 @@
     // Pure gamepads functions.
     // ------------------------
 
-    update = function () {
-        // Get information from browser, about connected game pads.
-        var pads = window.navigator.getGamepads();
-        // console.log('pads', pads);
-
-        var active = getActive(pads);
-        // console.log('active', active);
-
-        if (active !== null) {
-            handleJoysticks(active);
-        }
-
-        // Run as quick as browser can.
-        // window.requestAnimationFrame(update, document.body);
-        // window.requestAnimationFrame(update);
-    };
-
-    getActive = function (padlist) {
+    /**
+     * Return from GamepadList active pad or null.
+     *
+     * @returns {Gamepad|null}
+     */
+    function getActivePad() {
         var i;
+        // Get information from browser, about connected game pads.
+        var padlist = window.navigator.getGamepads();
 
         for (i = 0; i < Gamepad.MAX_PADS; ++i) {
             if (padlist[i] && padlist[i].connected) {
@@ -143,9 +119,102 @@
         }
 
         return null;
-    };
+    }
 
-    handleJoysticks = function (pad) {
+    /**
+     * Support arrows: UP, RIGHT, DOWN, LEFT.
+     *
+     * @param {Gamepad} pad
+     */
+    function handleArrows(pad) {
+        if (pad.buttons[4].pressed) {
+            Gamepad.emit('arrow:up');
+        }
+
+        if (pad.buttons[5].pressed) {
+            Gamepad.emit('arrow:right');
+        }
+
+        if (pad.buttons[6].pressed) {
+            Gamepad.emit('arrow:down');
+        }
+
+        if (pad.buttons[7].pressed) {
+            Gamepad.emit('arrow:left');
+        }
+    }
+
+    /**
+     * Handle shapes: Triangle, Circle, Cross, Square.
+     *
+     * @param {Gamepad} pad
+     */
+    function handleShapes(pad) {
+        if (pad.buttons[12].pressed) {
+            Gamepad.emit('shape:triangle');
+        }
+
+        if (pad.buttons[13].pressed) {
+            Gamepad.emit('shape:circle');
+        }
+
+        if (pad.buttons[14].pressed) {
+            Gamepad.emit('shape:cross');
+        }
+
+        if (pad.buttons[15].pressed) {
+            Gamepad.emit('shape:square');
+        }
+    }
+
+    /**
+     * Handle special buttons: Select, Start, PS
+     *
+     * @param {Gamepad} pad
+     */
+    function handleSpecial(pad) {
+        if (pad.buttons[0].pressed) {
+            Gamepad.emit('special:select');
+        }
+
+        if (pad.buttons[3].pressed) {
+            Gamepad.emit('special:start');
+        }
+
+        if (pad.buttons[16].pressed) {
+            Gamepad.emit('special:ps');
+        }
+    }
+
+    /**
+     * Handle extras buttons: L1, L2, R1, R2
+     *
+     * @param {Gamepad} pad
+     */
+    function handleExtras(pad) {
+        if (pad.buttons[10].pressed) {
+            Gamepad.emit('extra:l1');
+        }
+
+        if (pad.buttons[8].pressed) {
+            Gamepad.emit('extra:l2');
+        }
+
+        if (pad.buttons[11].pressed) {
+            Gamepad.emit('extra:r1');
+        }
+
+        if (pad.buttons[9].pressed) {
+            Gamepad.emit('extra:r2');
+        }
+    }
+
+    /**
+     * Analyze game pad axes, and emit event.
+     *
+     * @param {Gamepad} pad
+     */
+    function handleJoysticks(pad) {
         var leftStatuses = [];
         var rightStatuses = [];
         var len = pad.axes.length;
@@ -174,9 +243,7 @@
 
         // If any direction was choose emit event.
         if (leftStatuses.indexOf(true) !== -1) {
-            Gamepad.emit('joystick.left', {
-                direction: left
-            });
+            Gamepad.emit('joystick:left', left);
         }
 
         // Check activity of right joystick
@@ -186,11 +253,30 @@
 
         // If any direction was choose emit event.
         if (rightStatuses.indexOf(true) !== -1) {
-            Gamepad.emit('joystick.right', {
-                direction: right
-            });
+            Gamepad.emit('joystick:right', right);
         }
-    };
+    }
+
+    // Handle game pad actions.
+    function update() {
+        // Get active pad.
+        var activePad = getActivePad();
+
+        // If any active do nothing.
+        if (!activePad) {
+            return;
+        }
+
+        handleJoysticks(activePad);
+        handleArrows(activePad);
+        handleShapes(activePad);
+        handleSpecial(activePad);
+        handleExtras(activePad);
+
+        // Run as quick as browser can.
+        // window.requestAnimationFrame(update, document.body);
+        // window.requestAnimationFrame(update);
+    }
 
     // Global API object.
     Gamepad = {};
@@ -201,12 +287,12 @@
     // Extend Gamepad by events.
     extend(Gamepad, EventManager);
 
-    if (supportGamepad) {
+    if (isSupportGamepad) {
         window.addEventListener('gamepadconnected', function (evt) {
             // console.info('Gamepad: Connected: ', evt);
             console.info('Gamepad: Connected: ' + evt.gamepad.id);
             // window.requestAnimationFrame(update, document.body);
-            waiting = window.setInterval(update, 150);
+            waiting = window.setInterval(update, 180);
         });
 
         window.addEventListener('gamepaddisconnected', function (evt) {

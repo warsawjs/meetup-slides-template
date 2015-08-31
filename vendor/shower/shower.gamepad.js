@@ -11,23 +11,41 @@
         throw new ReferenceError('shower.js is required');
     }
 
-    Gamepad.on('joystick.left', function (evt) {
-        var dirs = evt.direction;
+    // Joysticks
 
-        if (dirs.left) {
+    Gamepad.on('joystick:left', function (direction) {
+        if (direction.left) {
             shower.prev();
-        } else if (dirs.right) {
+        } else if (direction.right) {
             shower.next();
         }
     });
 
-    Gamepad.on('joystick.right', function (evt) {
-        var dirs = evt.direction;
-
-        if (dirs.left) {
+    Gamepad.on('joystick:right', function (direction) {
+        if (direction.left) {
             shower.prev();
-        } else if (dirs.right) {
+        } else if (direction.right) {
             shower.next();
         }
+    });
+
+    // Arrows
+
+    Gamepad.on('arrow:right', function () {
+        shower.next();
+    });
+
+    Gamepad.on('arrow:left', function () {
+        shower.prev();
+    });
+
+    // Shapes
+
+    Gamepad.on('shape:circle', function () {
+        shower.next();
+    });
+
+    Gamepad.on('shape:square', function () {
+        shower.prev();
     });
 }());

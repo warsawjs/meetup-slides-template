@@ -1,2 +1,2 @@
-.idea/
-nbproject/
+/node_modules/
+/npm-debug.log
