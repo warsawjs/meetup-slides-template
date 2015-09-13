@@ -3,97 +3,102 @@
  WarsawJS Red: #f7302f
 */
 @font-face {
-  font-family: firalight;
-  src: url(../fonts/FiraSans-Light.otf);
+    font-family: firalight;
+    src: url(../fonts/FiraSans-Light.otf);
 }
 
 @font-face {
-  font-family: firaultralight;
-  src: url(../fonts/FiraSans-UltraLight.otf);
+    font-family: firaultralight;
+    src: url(../fonts/FiraSans-UltraLight.otf);
 }
 
 @font-face {
-  font-family: fira;
-  src: url(../fonts/FiraSans-Regular.otf);
+    font-family: fira;
+    src: url(../fonts/FiraSans-Regular.otf);
 }
 
 .slide h2 {
-  color: #f7302f;
-  font-weight: normal;
-  font-family: firalight, sans-serif;
+    color: #f7302f;
+    font-weight: normal;
+    font-family: firalight, sans-serif;
 }
 
 .slide:after {
-  display: none;
+    display: none;
 }
 
 .front-page {
-  background: url(../images/panoramatail.png) repeat-x white 0px 90%;
-  background-size: 20%;
+    background: url(../images/panoramatail.png) repeat-x white 0px 90%;
+    background-size: 20%;
+}
+
+.front-page > div {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
 }
 
 .front-page .logo {
-  width: 45%;
-  float: left;
+    width: 340px;
+    float: left;
 }
 
-.front-page img {
-  width: 100%;
+.front-page .logo img {
+    width: 100%;
 }
 
-.front-page .content {
-  float: left;
-  width: calc(55% - 53px);
-  border-left: 3px solid red;
-  padding: 10px 0 10px 50px;
-  margin-top: 50px;
+.front-page .details {
+    float: left;
+    width: 622px;
+    border-left: 3px solid red;
+    padding: 0 0 10px 50px;
+    margin-top: 5px;
 }
 
-.front-page .content h2 {
-  height: 200px;
-  margin: 0px;
-  color: black;
-}
-
-.front-page .content p {
-  padding: 0px;
-  margin: 0px;
-  font-family: firaultralight, sans-serif;
-  color: #777;
+.front-page .details h2 {
+    font-family: firaultralight, sans-serif;
+    color: black;
+    font-size: 26px;
+    padding: 0;
+    margin: 0 0 10px 0;
 }
 
 .slide kbd, .slide code, .slide samp {
-  background-color: #f0db4f;
+    background-color: #f0db4f;
 }
 
 .slide b, .slide strong {
-  color: #f7302f;
+    color: #f7302f;
+}
+
+.slide a {
+    color: #2380e6;
 }
 
 .slide pre mark {
-  background-color: #f0db4f;
+    background-color: #f0db4f;
 }
 
 .slide pre mark.important {
-  background-color: #f7302f;
+    background-color: #f7302f;
 }
 
 .slide p {
-  font-family: fira, sans-serif;
+    font-family: fira, sans-serif;
 }
 
 .slide.shout h2 {
-  color: black;
+    color: black;
 }
 
 .slide.cover h2 {
-  color: white;
+    color: white;
 }
 
 .slide.cover div img {
-  width: 100%;
+    width: 100%;
 }
 
 .full .progress div {
-  border-color: transparent transparent #f7302f;
+    border-color: transparent transparent #f7302f;
 }
