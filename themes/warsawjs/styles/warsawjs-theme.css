@@ -102,3 +102,14 @@
 .full .progress div {
     border-color: transparent transparent #f7302f;
 }
+
+.badge-left {
+    left: 0;
+}
+.badge-left a {
+    background: #f0db4f;
+    transform: rotate(315deg)translateY(-1em);
+}
+.badge-left a:hover {
+    background: #f7302f;
+}
