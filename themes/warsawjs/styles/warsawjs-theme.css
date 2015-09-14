@@ -27,23 +27,22 @@
     display: none;
 }
 
-.front-page {
+.slide.front-page {
     background: url(../images/panoramatail.png) repeat-x white 0px 90%;
     background-size: 20%;
 }
 
-.front-page > div {
-    padding-left: 0;
-    padding-right: 0;
+.slide.front-page > div {
+    padding: 105px 0 0;
     width: 100%;
 }
 
-.front-page .logo {
+.slide.front-page .logo {
     width: 440px;
     float: left;
 }
 
-.front-page .details {
+.slide.front-page .details {
     float: left;
     width: 522px;
     border-left: 3px solid red;
@@ -51,7 +50,7 @@
     margin-top: 5px;
 }
 
-.front-page .details h2 {
+.slide.front-page .details h2 {
     font-family: firaultralight, sans-serif;
     color: black;
     font-size: 26px;
