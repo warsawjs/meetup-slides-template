@@ -105,6 +105,8 @@
 
 .badge-left a {
     background: #f7302f;
+    -webkit-transform: rotate(315deg) translateY(-1em);
+    -ms-transform: rotate(315deg) translateY(-1em);
     transform: rotate(315deg) translateY(-1em);
 }
 
