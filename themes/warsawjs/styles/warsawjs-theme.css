@@ -39,17 +39,13 @@
 }
 
 .front-page .logo {
-    width: 340px;
+    width: 440px;
     float: left;
-}
-
-.front-page .logo img {
-    width: 100%;
 }
 
 .front-page .details {
     float: left;
-    width: 622px;
+    width: 522px;
     border-left: 3px solid red;
     padding: 0 0 10px 50px;
     margin-top: 5px;
