@@ -1,4 +1,4 @@
-# WarsawJS Presentation: Template
+# WarsawJS Slides: Template
 
 ![Logo](/pictures/logo/logo-light.png)
 
