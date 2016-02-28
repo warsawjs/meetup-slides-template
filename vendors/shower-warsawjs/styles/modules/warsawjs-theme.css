@@ -1,0 +1,37 @@
+.slide h2 {
+    color: #f7302f;
+    font-weight: normal;
+    font-family: firalight, sans-serif;
+}
+
+.slide h2.shout {
+    color: black;
+}
+
+.slide kbd, .slide samp {
+    background-color: #f0db4f;
+}
+
+.slide b, .slide strong {
+    color: #f7302f;
+}
+
+.slide a {
+    color: #2380e6;
+}
+
+.slide pre mark {
+    background-color: #f0db4f;
+}
+
+.slide pre mark.important {
+    background-color: #f7302f;
+}
+
+.slide p {
+    font-family: fira, sans-serif;
+}
+
+.full .progress {
+    border-color: transparent transparent #f7302f;
+}

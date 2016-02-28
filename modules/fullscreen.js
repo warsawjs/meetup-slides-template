@@ -5,7 +5,7 @@
     var document = root.document;
 
     // Catch reference to button.
-    var link = document.querySelector('.badge-left');
+    var link = document.querySelector('.fullscreen');
 
     // Link must be available in DOM.
     if (!link) return;

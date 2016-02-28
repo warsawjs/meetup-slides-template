@@ -1,0 +1,12 @@
+.badge.badge-down {
+    top: auto;
+    bottom: 0;
+    position: fixed;
+}
+
+.badge.badge-down a {
+    background: #f7302f;
+    -webkit-transform: rotate(675deg) translateY(2em);
+    -ms-transform: rotate(675deg) translateY(2em);
+    transform: rotate(675deg) translateY(2em);
+}

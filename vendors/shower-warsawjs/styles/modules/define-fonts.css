@@ -1,0 +1,14 @@
+@font-face {
+    font-family: firalight;
+    src: url(../../fonts/FiraSans-Light.otf);
+}
+
+@font-face {
+    font-family: firaultralight;
+    src: url(../../fonts/FiraSans-UltraLight.otf);
+}
+
+@font-face {
+    font-family: fira;
+    src: url(../../fonts/FiraSans-Regular.otf);
+}
