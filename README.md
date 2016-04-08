@@ -1,6 +1,6 @@
 # WarsawJS Slides: Template
 
-![Logo](/pictures/logo/logo-light.png)
+![Logo](/pictures/logo/warsawjs-logo-light.png)
 
 ---
 
