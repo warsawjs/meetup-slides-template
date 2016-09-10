@@ -1,0 +1,15 @@
+.badge.badge-top-left {
+    top: 0;
+    left: 0;
+}
+
+.badge.badge-top-left a {
+    background: #f7302f;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.badge.badge-top-left a:hover {
+    background: #f0db4f;
+}
