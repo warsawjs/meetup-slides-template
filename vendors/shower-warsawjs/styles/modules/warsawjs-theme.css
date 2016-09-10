@@ -35,3 +35,8 @@
 .full .progress {
     border-color: transparent transparent #f7302f;
 }
+
+/* Hide top badge on each slide */
+.slide:after {
+    display: none;
+}
