@@ -32,6 +32,10 @@
     font-family: fira, sans-serif;
 }
 
+.slide.compact {
+    padding: 50px;
+}
+
 .full .progress {
     border-color: transparent transparent #f7302f;
 }

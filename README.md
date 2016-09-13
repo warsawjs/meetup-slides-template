@@ -2,11 +2,11 @@
 
 ![Logo](/pictures/logo/warsawjs-logo-light.png)
 
----
+## Colors
 
-JavaScript Yellow Color: `#f0db4f`
-WarsawJS Red Color: `#f7302f`
+* JavaScript Yellow Color: `#f0db4f`
+* WarsawJS Red Color: `#f7302f`
 
----
+## License
 
-Licensed under [MIT License](http://en.wikipedia.org/wiki/MIT_License), see [license page](https://github.com/shower/shower/wiki/MIT-License) for details.
+[The MIT License](http://en.wikipedia.org/wiki/MIT_License)
