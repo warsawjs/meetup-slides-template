@@ -1,6 +1,6 @@
 # WarsawJS Slides: Template
 
-![Logo](/pictures/logo/warsawjs-logo-light.png)
+![Logo](/vendors/shower-warsawjs/images/logo-white-400x400.jpg)
 
 ## Colors
 
