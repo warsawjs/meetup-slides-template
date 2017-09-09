@@ -1,0 +1,4 @@
+/* Hide top badge on each slide */
+.slide:after {
+    display: none;
+}
