@@ -1,6 +1,6 @@
 # WarsawJS Slides: Template
 
-![Logo](./vendors/shower-warsawjs/images/logo-transparent-400x400.png)
+<img src="./vendors/shower-warsawjs/images/logo.svg" width="400" />
 
 ## Colors
 
