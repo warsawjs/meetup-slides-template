@@ -1,12 +1,20 @@
-# WarsawJS Slides: Template
+# WarsawJS Meetup: Slides template
 
-<img src="./vendors/shower-warsawjs/images/logo.svg" width="400" />
+:clipboard: Slides for `WarsawJS Meetup`
+
+## Preview
+
+<https://warsawjs.github.io/meetup-slides-template>
+
+## Organization logo
+
+<img src="./vendors/shower-warsawjs/images/logo.svg" width="350"/>
 
 ## Colors
 
-* JavaScript Yellow Color: `#f0db4f`
-* WarsawJS Red Color: `#f7302f`
+* Yellow: `#f0db4f` (JavaScript Color)
+* Red: `#f7302f` (WarsawJS Color)
 
 ## License
 
-[The MIT License](http://en.wikipedia.org/wiki/MIT_License) @ 2017
+[The MIT License](http://en.wikipedia.org/wiki/MIT_License) @ 2018
