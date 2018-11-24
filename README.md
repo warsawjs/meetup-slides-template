@@ -10,14 +10,14 @@
 
 1. For this project
 2. Rename project at `GitHub` (with snake-case style)
-3. In `README.md`:
+3. Update `description` and `link` on GitHub repository profile
+4. In `index.html`:
+    + `<title>` & `<h1>` tags should have title of your talk
+    + Update link to `"Fork me on GitHub"` at the bottom of document
+5. In `README.md`:
     + Update main header (in first file)
     + Update `Preview` link
     + Remove this tutorial
-4. Update `description` and `link` on GitHub repository profile
-5. In `index.html`:
-    + `<title>` & `<h1>` tags should have title of your talk
-    + Update link to `"Fork me on GitHub"` at the bottom of document
 
 ## Organization logo
 
