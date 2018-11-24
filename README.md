@@ -6,15 +6,18 @@
 
 <https://warsawjs.github.io/meetup-slides-template>
 
-## Updating slides to your needs
+## :bulb: How to use this template?
 
-* rename project at `GitHub` with snake-case convention
-* `description` and `link` on GitHub repository profile
-* link to `"Fork me on GitHub"` at the bottom of document
-* setup presentation title in
-    + `<title>` tag on the top of document in `<head>` tag
-    + `README.md` file
-    + `<h1>` tag at `<header>` tag on the top of document
+1. For this project
+2. Rename project at `GitHub` (with snake-case style)
+3. In `README.md`:
+    + Update main header (in first file)
+    + Update `Preview` link
+    + Remove this tutorial
+4. Update `description` and `link` on GitHub repository profile
+5. In `index.html`:
+    + `<title>` & `<h1>` tags should have title of your talk
+    + Update link to `"Fork me on GitHub"` at the bottom of document
 
 ## Organization logo
 
