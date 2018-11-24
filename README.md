@@ -6,6 +6,16 @@
 
 <https://warsawjs.github.io/meetup-slides-template>
 
+## Updating slides to your needs
+
+* rename project at `GitHub` with snake-case convention
+* `description` and `link` on GitHub repository profile
+* link to `"Fork me on GitHub"` at the bottom of document
+* setup presentation title in
+    + `<title>` tag on the top of document in `<head>` tag
+    + `README.md` file
+    + `<h1>` tag at `<header>` tag on the top of document
+
 ## Organization logo
 
 <img src="./vendors/shower-warsawjs/images/logo.svg" width="350"/>
