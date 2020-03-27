@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-body {
-    font-family: 'Fira Sans', sans-serif;
+body, .shower, .caption h1, .slide h2 {
+    font-family: 'Lato', sans-serif;
 }
 
 .full .progress {
@@ -49,6 +49,7 @@ body {
 
 .slide a {
     color: #2380e6;
+    background: none;
 }
 
 .slide pre mark.important {

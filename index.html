@@ -3,20 +3,20 @@
 <head>
     <title>WarsawJS Meetup: Slides template</title>
 
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width"/>
-    <link href="images/icons/warsawjs-logo-transparent-32x32.png" rel="icon" type="image/png" sizes="32x32"/>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    <link href="images/icons/warsawjs-logo-transparent-32x32.png" rel="icon" type="image/png" sizes="32x32">
 
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,900&amp;subset=latin-ext" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400,900&amp;subset=latin-ext" rel="stylesheet">
 
     <!-- Shower Theme -->
-    <link rel="stylesheet" href="vendors/shower-ribbon/styles/screen-16x9.css"/>
-    <link rel="stylesheet" href="vendors/shower-warsawjs/styles/main.css"/>
+    <link rel="stylesheet" href="vendors/shower-ribbon/styles/screen-16x9.css">
+    <link rel="stylesheet" href="vendors/shower-warsawjs/styles/main.css">
 
     <!-- Prism.js -->
-    <link rel="stylesheet" href="vendors/prism/prism.css"/>
-    <link rel="stylesheet" href="vendors/prism/custom-prism.css"/>
+    <link rel="stylesheet" href="vendors/prism/prism.css">
+    <link rel="stylesheet" href="vendors/prism/custom-prism.css">
 </head>
 <body class="shower list">
     <header class="caption">
@@ -25,26 +25,18 @@
     </header>
 
     <section class="slide front-page">
-        <div class="logo">
-            <!-- Logo WarsawJS -->
-            <img src="vendors/shower-warsawjs/images/logo.svg" width="350" alt=""/>
-        </div>
-        <div class="details">
-            <!-- 1. Avatar -->
-            <img src="images/my-avatar.jpg" alt="Speaker"/>
-
-            <!-- 2. Speaker -->
-            <h2>Speaker name</h2>
-
-            <!-- 3. Presentation title -->
-            <h2><strong>"WarsawJS Meetup: Slides template" [PL/EN]</strong></h2>
-
-            <!-- 4. Presentation date -->
-            <h2>2018-XX-XX</h2>
-
-            <!-- 5. Contact the speaker -->
-            <h2><a href="http://twitter.com/speaker">@speaker</a></h2>
-        </div>
+      <div class="talk-card">
+          <img class="logo" src="vendors/shower-warsawjs/images/logo.svg" alt="">
+          <div class="details">
+              <img class="speaker-avatar" src="images/avatars/speaker-avatar.jpg" alt="">
+              <h2 class="speaker-name">Speaker Name</h2>
+              <h1 class="talk-title">Talk Title</h1>
+              <p class="talk-perform">2020-??-??</p>
+              <p class="speaker-contact">
+                  <a href="https://www.linkedin.com/in/speaker">linkedin.com/in/speaker</a>
+              </p>
+          </div>
+      </div>
     </section>
 
     <section class="slide compact">
@@ -224,7 +216,7 @@
     <section class="slide prism">
         <h2>Listing Slide</h2>
 
-        <pre style="font-size: 45px;" class="language-javascript line-numbers">
+        <pre style="font-size: 40px;" class="language-javascript line-numbers">
             <code>
                 function wrap(value) {
                     return function () {
@@ -304,7 +296,7 @@
     </section>
 
     <section class="slide">
-        <img class="cover" src="images/gifs/example-gif.gif" width="480" height="360" alt=""/>
+        <img class="cover" src="images/gifs/example-gif.gif" width="480" height="360" alt="">
     </section>
 
     <section class="slide">

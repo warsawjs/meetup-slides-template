@@ -1,28 +1,61 @@
 @charset "utf-8";
 
 .slide.front-page {
-    background: url(../../images/panoramatail.png) repeat-x #fff 0 90%;
-    background-size: 20%;
-    padding: 70px 40px 0;
+    padding: 58px 40px 0;
+}
+
+.slide.front-page .talk-card {
+    display: flex;
 }
 
 .slide.front-page .logo {
-    width: 440px;
-    float: left;
+    width: 254px;
+    margin: 0 39px 0 7px
 }
 
 .slide.front-page .details {
     float: left;
-    width: calc(100% - 440px);
+    width: calc(100% - 310px);
     border-left: 3px solid #f7302f;
-    padding: 0 0 10px 50px;
-    margin-top: 5px;
+    padding: 0 0 10px 62px;
 }
 
-.slide.front-page .details h2 {
+.slide.front-page .details .speaker-avatar {
+    width: 214px;
+    height: 214px;
+    margin: 0 0 4px 0;
+    line-height: normal;
+}
+
+.slide.front-page .details .speaker-name {
     color: #000;
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 54px;
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 4px 0;
+    line-height: normal;
+}
+
+.slide.front-page .details .talk-title {
+    color: #f7302f;
+    font-size: 25px !important;
+    padding: 0;
+    margin: 0;
+    height: 74px;
+    line-height: normal;
+}
+
+.slide.front-page .details .talk-perform {
+    color: #999999;
+    font-size: 26px;
+    padding: 0;
+    margin: 0 0 13px 0;
+    line-height: normal;
+}
+
+.slide.front-page .details .speaker-contact {
+    color: #2380E6;
+    font-size: 26px;
+    padding: 0;
+    margin: 0;
+    line-height: normal;
 }
