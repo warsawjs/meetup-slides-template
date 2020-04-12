@@ -8,7 +8,7 @@
 
 ## :bulb: How to use this template?
 
-1. For this project
+1. Fork this project
 2. Rename project (with snake-case style)
 3. Update `description` and `link` on GitHub repository profile
 4. In `index.html`:
